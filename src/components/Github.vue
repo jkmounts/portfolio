@@ -9,7 +9,7 @@
             <a :href="profile.html_url">{{ profile.html_url }}</a>
         </div>
         <div class="repos_container">
-            <h3 @click="toggleReposOpen()">Repos: {{ profile.public_repos }}</h3>
+            <h3 @click="toggleReposOpen()">Repos: {{ profile.public_repos }} (click to view)</h3>
             <div class="repos" v-if="reposOpen">
                 <github-repo v-for="(repo, index) in repos" :repo="repo" :key="index" />
             </div>
